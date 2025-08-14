@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import type { Testimonial } from '../types';
 
 const testimonialsData: Testimonial[] = [
@@ -24,7 +25,7 @@ const testimonialsData: Testimonial[] = [
 ];
 
 const Testimonials: React.FC = () => {
-    const containerVariants = {
+    const containerVariants: Variants = {
         hidden: {},
         visible: {
             transition: {
@@ -33,7 +34,7 @@ const Testimonials: React.FC = () => {
         }
     };
 
-    const itemVariants = {
+    const itemVariants: Variants = {
         hidden: { opacity: 0, scale: 0.95 },
         visible: { 
             opacity: 1, 

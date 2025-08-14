@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { GrowthIcon, BookOpenIcon, CommunityIcon, CheckmarkIcon } from './IconComponents';
 
 const featuresData = [
@@ -27,7 +28,7 @@ const featuresData = [
 
 const Features: React.FC = () => {
     
-    const containerVariants = {
+    const containerVariants: Variants = {
         hidden: {},
         visible: {
             transition: {
@@ -36,7 +37,7 @@ const Features: React.FC = () => {
         }
     };
 
-    const itemVariants = {
+    const itemVariants: Variants = {
         hidden: { opacity: 0, y: 20 },
         visible: { 
             opacity: 1, 
